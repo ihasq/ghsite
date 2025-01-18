@@ -4,4 +4,4 @@ const fetchHandler = async fetchEvent => {
 	return fetch("https://cdn.jsdelivr.net/gh/" + pathChunk)
 }
 
-self.addEventListener("fetch", e => e.respondWith(fetchHandler), true);
+self.addEventListener("fetch", e => e.respondWith(fetchHandler(e)), true);
